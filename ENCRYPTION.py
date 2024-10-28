@@ -62,7 +62,7 @@ def marshal_enc():
     try:
         file_open=open(file,'r').read()
     except:
-        exit(' FILE NOT FOUND ERROR !!')
+        exit(' ERROR DE ARCHIVO NO ENCONTRADO !!')
     compilex=compile(file_open,'dg','exec')
     dump=marshal.dumps(compilex)
     run_code=f'import marshal \nexec(marshal.loads({dump}))'
@@ -80,14 +80,14 @@ def base64_enc():
     try:
         file_open=open(input_file,'r').read()
     except:
-        exit(' FILE NOT FOUND ERROR !!')
+        exit(' ERROR DE ARCHIVO NO ENCONTRADO !!')
     compile=base64.b64encode(file_open.encode())
     run_code=f'import base64\nexec(base64.b64decode({compile}))'
     out_put=open(output_file,'w')
     out_put.write(run_code)
     out_put.close()
     print(' [✓✓] ENCRYPTION COMPLETE :/')
-    print(' [✓✓] ENC FILE SAVE AS : '+output_file)
+    print(' [✓✓] ENC ARCHIVO GUARDAR COMO : '+output_file)
 #---------------- ZLIB ENCRYPTION -----------------#
 def zlib_enc():
     clear()
@@ -96,7 +96,7 @@ def zlib_enc():
     try:
         src_file=open(src,'r').read()
     except:
-        exit(' FILE NOT FOUND !!')
+        exit(' ERROR DE ARCHIVO NO ENCONTRADO !!')
     compile_zlib=zlib.compress(src_file.encode())
     run_code=f'import zlib\nexec(zlib.decompress({compile_zlib}).decode())'
     out_put=open(save_file,'w')
@@ -111,7 +111,7 @@ def cython_executable():
     try:
         filex=open(file,'r').read()
     except:
-        exit(' FILE NOT FOUND ERROR :/')
+        exit(' ERROR DE ARCHIVO NO ENCONTRADO :/')
     error=filex.replace('	','    ')
     solve=open(file,'w').write(error)
     execute(file)
