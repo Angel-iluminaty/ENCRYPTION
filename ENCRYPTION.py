@@ -75,8 +75,8 @@ def marshal_enc():
 #---------- BASE64 ENCRYPTION ------------#
 def base64_enc():
     clear()
-    input_file=input(' ENTER SOURCE FILE PATH : ')
-    output_file=input(' ENTER OUTPUT FILE PATH : ')
+    input_file=input(' INGRESE LA RUTA DEL ARCHIVO  : ')
+    output_file=input(' INGRESE LA RUTA DEL ARCHIVO DE SALIDA : ')
     try:
         file_open=open(input_file,'r').read()
     except:
@@ -91,8 +91,8 @@ def base64_enc():
 #---------------- ZLIB ENCRYPTION -----------------#
 def zlib_enc():
     clear()
-    src=input(' ENTER SOURCE FILE PATH : ')
-    save_file=input(' ENTER OUTPUT FILE PATH : ')
+    src=input(' INGRESE LA RUTA DEL ARCHIVO  : ')
+    save_file=input(' INGRESE LA RUTA DEL ARCHIVO DE SALIDA : ')
     try:
         src_file=open(src,'r').read()
     except:
@@ -107,7 +107,7 @@ def zlib_enc():
 #--------------- CYTHON EXECUTABLE -----------------#
 def cython_executable():
     clear()
-    file=input(' ENTER SOURCE FILE PATH : ')
+    file=input(' INGRESE LA RUTA DEL ARCHIVO : ')
     try:
         filex=open(file,'r').read()
     except:
